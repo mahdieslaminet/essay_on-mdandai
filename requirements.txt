@@ -1,0 +1,23 @@
+# requirements.txt برای اجرای Hulu-Med-7B فقط با CPU
+# نسخه‌های تست‌شده (دسامبر ۲۰۲۵) – بدون نیاز به CUDA یا GPU
+
+# PyTorch فقط برای CPU
+torch==2.4.0
+torchvision==0.19.0
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# پکیج‌های اصلی (۴-bit روی CPU هم کار می‌کنه اما کندتر)
+bitsandbytes==0.43.0
+accelerate
+transformers==4.51.2
+
+# پردازش تصویر و فایل‌های پزشکی
+decord
+imageio
+nibabel
+opencv-python
+pillow
+
+# اختیاری
+gdown
+tqdm

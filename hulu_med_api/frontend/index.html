@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>Hulu-Med Edge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🩺 Hulu-Med Edge</h1>
+  <p class="subtitle">Medical AI Assistant (Edge Deployment)</p>
+
+  <form id="analyzeForm">
+    <label>تصویر پزشکی</label>
+    <input type="file" id="image" accept="image/*" required>
+
+    <label>سؤال / توضیح پزشک</label>
+    <textarea id="prompt" placeholder="مثلاً: این X-ray را از نظر پنومونی بررسی کن" required></textarea>
+
+    <button type="submit">Analyze</button>
+  </form>
+
+  <div id="loader" class="hidden">⏳ در حال پردازش...</div>
+
+  <div id="result" class="hidden">
+    <h3>📄 پاسخ مدل</h3>
+    <p id="answer"></p>
+  </div>
+
+  <p class="disclaimer">
+    ⚠️ این سیستم صرفاً جهت کمک آموزشی است و جایگزین نظر پزشک نیست.
+  </p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
